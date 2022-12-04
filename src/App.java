@@ -18,9 +18,9 @@ public class App {
         String ulang = "y";
 
         do {
-            System.out.println("=================================================");
+            System.out.println("------------------------------------------------");
             println("Selamat datang di program konversi suhu JAVA");
-            System.out.println("=================================================");
+            System.out.println("------------------------------------------------");
             println("Pilih suhu yang ingin anda konversikan");
             println("1.Celcius");
             println("2.Fahrenheit");
@@ -47,19 +47,19 @@ public class App {
 
                     switch (pilih_suhu2) {
                         case 1:
-                            System.out.println(celtofah(suhuAwal));
+                            System.out.println(conv.celtofah(suhuAwal));
                             break;
 
                         case 2:
-                            System.out.println(celtokel(suhuAwal));
+                            System.out.println(conv.celtokel(suhuAwal));
                             break;
 
                         case 3:
-                            System.out.println(celtore(suhuAwal));
+                            System.out.println(conv.celtore(suhuAwal));
                             break;
 
                         case 4:
-                            System.out.println(celtoran(suhuAwal));
+                            System.out.println(conv.celtoran(suhuAwal));
                             break;
 
                         default:
@@ -81,19 +81,19 @@ public class App {
                     switch (pilih_suhu2) {
 
                         case 1:
-                            System.out.println(fahtocel(suhuAwal));
+                            System.out.println(conv.fahtocel(suhuAwal));
                             break;
 
                         case 2:
-                            System.out.println(fahtokel(suhuAwal));
+                            System.out.println(conv.fahtokel(suhuAwal));
                             break;
 
                         case 3:
-                            System.out.println(fahtore(suhuAwal));
+                            System.out.println(conv.fahtore(suhuAwal));
                             break;
 
                         case 4:
-                            System.out.println(fahtoran(suhuAwal));
+                            System.out.println(conv.fahtoran(suhuAwal));
                             break;
 
                         default:
@@ -115,19 +115,19 @@ public class App {
                     switch (pilih_suhu2) {
 
                         case 1:
-                            System.out.println(keltocel(suhuAwal));
+                            System.out.println(conv.keltocel(suhuAwal));
                             break;
 
                         case 2:
-                            System.out.println(keltofah(suhuAwal));
+                            System.out.println(conv.keltofah(suhuAwal));
                             break;
 
                         case 3:
-                            System.out.println(keltore(suhuAwal));
+                            System.out.println(conv.keltore(suhuAwal));
                             break;
 
                         case 4:
-                            System.out.println(keltoran(suhuAwal));
+                            System.out.println(conv.keltoran(suhuAwal));
                             break;
 
                         default:
@@ -150,19 +150,19 @@ public class App {
                     switch (pilih_suhu2) {
 
                         case 1:
-                            System.out.println(retocel(suhuAwal));
+                            System.out.println(conv.retocel(suhuAwal));
                             break;
 
                         case 2:
-                            System.out.println(retofah(suhuAwal));
+                            System.out.println(conv.retofah(suhuAwal));
                             break;
 
                         case 3:
-                            System.out.println(retokel(suhuAwal));
+                            System.out.println(conv.retokel(suhuAwal));
                             break;
 
                         case 4:
-                            System.out.println(retoran(suhuAwal));
+                            System.out.println(conv.retoran(suhuAwal));
                             break;
 
                         default:
@@ -183,19 +183,19 @@ public class App {
 
                     switch (pilih_suhu2) {
                         case 1:
-                            System.out.println(rantocel(suhuAwal));
+                            System.out.println(conv.rantocel(suhuAwal));
                             break;
 
                         case 2:
-                            System.out.println(rantofah(suhuAwal));
+                            System.out.println(conv.rantofah(suhuAwal));
                             break;
 
                         case 3:
-                            System.out.println(rantokel(suhuAwal));
+                            System.out.println(conv.rantokel(suhuAwal));
                             break;
 
                         case 4:
-                            System.out.println(rantore(suhuAwal));
+                            System.out.println(conv.rantore(suhuAwal));
                             break;
 
                         default:
@@ -213,110 +213,5 @@ public class App {
             println("Apakah ingin melakukannya lagi (y/t)");
             ulang = sc.next();
         } while (ulang.equals("y"));
-    }
-
-    // konversi suhu celcius
-    static double celtofah(double suhu) {
-        double hasil = 1.8 * suhu + 32;
-        return hasil;
-    }
-
-    static double celtokel(double suhu) {
-        double hasil = suhu + 273.15;
-        return hasil;
-    }
-
-    static double celtore(double suhu) {
-        double hasil = 0.8 * suhu;
-        return hasil;
-    }
-
-    static double celtoran(double suhu) {
-        double hasil = (suhu + 273.15) * 1.8;
-        return hasil;
-    }
-
-    // koonversi suhu fahrenheit
-    static double fahtocel(double suhu) {
-        double hasil = (suhu - 32) * 0.56;
-        return hasil;
-    }
-
-    static double fahtokel(double suhu) {
-        double hasil = (suhu + 459.67) * 0.56;
-        return hasil;
-    }
-
-    static double fahtore(double suhu) {
-        double hasil = 0.44 * (suhu - 32);
-        return hasil;
-    }
-
-    static double fahtoran(double suhu) {
-        double hasil = suhu + 459.67;
-        return hasil;
-    }
-
-    // konversi suhu kelvin
-    static double keltocel(double suhu) {
-        double hasil = suhu - 273.15;
-        return hasil;
-    }
-
-    static double keltofah(double suhu) {
-        double hasil = (suhu * 1.8) - 459.67;
-        return hasil;
-    }
-
-    static double keltore(double suhu) {
-        double hasil = 0.8 * (suhu - 273);
-        return hasil;
-    }
-
-    static double keltoran(double suhu) {
-        double hasil = suhu * 1.8;
-        return hasil;
-    }
-
-    // konversi suhu reamur
-    static double retocel(double suhu) {
-        double hasil = suhu / 0.8;
-        return hasil;
-    }
-
-    static double retofah(double suhu) {
-        double hasil = (suhu * 2.25) + 32;
-        return hasil;
-    }
-
-    static double retokel(double suhu) {
-        double hasil = (suhu * 0.8) + 273.15;
-        return hasil;
-    }
-
-    static double retoran(double suhu) {
-        double hasil = (suhu * 2.25) + 491.67;
-        return hasil;
-    }
-
-    // konversi suhu rankine
-    static double rantocel(double suhu) {
-        double hasil = (suhu - 491.67) * 0.56;
-        return hasil;
-    }
-
-    static double rantofah(double suhu) {
-        double hasil = suhu - 459.67;
-        return hasil;
-    }
-
-    static double rantokel(double suhu) {
-        double hasil = suhu * 0.56;
-        return hasil;
-    }
-
-    static double rantore(double suhu) {
-        double hasil = (suhu / 1.8 + 273.15) * 0.8;
-        return hasil;
     }
 }
